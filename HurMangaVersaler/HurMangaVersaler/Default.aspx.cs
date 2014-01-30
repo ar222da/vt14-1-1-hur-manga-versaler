@@ -16,7 +16,7 @@ namespace HurMangaVersaler
 
         protected void Button_Click(object sender, EventArgs e)
         {
-            if (TextBox.Enabled)
+            if (TextBox.Text != String.Empty)
             {
                 TextBox.Enabled = false;
                 string inputText = TextBox.Text;
@@ -24,13 +24,6 @@ namespace HurMangaVersaler
                 Result.Text = capitalLetters.ToString();
                 OutputPlaceHolder.Visible = true;
                 Button.Text = "Rensa";
-            }
-            else
-            {
-                TextBox.Text = "";
-                TextBox.Enabled = true;
-                OutputPlaceHolder.Visible = false;
-                Button.Text = "Beräkna antalet versaler";
             }
         }
     }
